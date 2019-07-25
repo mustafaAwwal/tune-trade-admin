@@ -50,7 +50,7 @@ export class GetTokenRequestsService {
         sessionStorage.setItem('token', headerValue);
       } else {
         sessionStorage.clear();
-        this.router.navigate(['/auth']);
+        this.router.navigate(['']);
       }
     });
     return response;

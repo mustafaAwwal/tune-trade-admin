@@ -15,7 +15,7 @@ export class AuthCanActivateGuardService implements CanActivate {
     if (sessionStorage.getItem('authToken')) {
       return true;
     } else {
-      this.router.navigate(['/auth']);
+      this.router.navigate(['']);
       return false;
     }
 

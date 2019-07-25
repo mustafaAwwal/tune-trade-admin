@@ -10,6 +10,6 @@ export class AuthService {
 
   logout() {
     sessionStorage.clear();
-    this.router.navigate(['/auth']);
+    this.router.navigate(['']);
   }
 }
