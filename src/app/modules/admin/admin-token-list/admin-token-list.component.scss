@@ -1,0 +1,39 @@
+.viewButton {
+    padding: 0px;
+    .table-button {
+        width: 100%;
+        background-color: #343A40;
+        color: white;
+        height: 100%;
+        border-radius: 0px;
+    }
+}
+.tokenViewDiv {
+    position: absolute;
+    width: 100%;
+    top:5%;
+    left:0;
+    z-index: 1000;
+}
+
+.nav-tabs-custom {
+    .nav-item {
+        border: none;
+        .nav-link {
+            border: none;
+            margin-bottom: 20px;
+            color: #343A40;
+        }
+    }
+    .token-tab-custom {
+        .active {
+            border-bottom: 3px solid #343A40;
+        }
+    }
+    .live-token-tab-custom {
+        .active {
+            border-bottom: 3px solid #87ceeb;
+            transition: 200ms;
+        }
+    }
+}
