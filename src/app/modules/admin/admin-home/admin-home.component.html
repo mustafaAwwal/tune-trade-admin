@@ -1,29 +1,21 @@
 <h3>Token Create Requests</h3>
 <hr>
-<div *ngIf="!showToken" class="table-responsive">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-            <th>Token Name</th>
-            <th>Symbol</th>
-            <th>Total Supply</th>
-            <th>Decimal</th>
-            <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let token of tokens">
-                <td>{{token.tokenName}}</td>
-                <td>{{token.tokenSymbol}}</td>
-                <td>{{token.totalSupply}}</td>
-                <td>{{token.decimals}}</td>
-                <td class="viewButton"><button class="btn table-button" (click)="showTokenTrigger(token)">View</button></td>
-            </tr>
-        </tbody>
-        </table>
-        
+<ul class="nav nav-tabs nav-tabs-custom" id="myTab" role="tablist">
+    <li class="nav-item token-tab-custom">
+        <a class="nav-link active" id="create-token-tab" data-toggle="tab" href="#create-token" role="tab" aria-controls="create-token" aria-selected="true">Tokens</a>
+    </li>
+    <li class="nav-item live-token-tab-custom">
+        <a class="nav-link" id="deploy-token-tab" data-toggle="tab" href="#deploy-token" role="tab" aria-controls="deploy-token" aria-selected="false">Deployed Tokens</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="create-token" role="tabpanel" aria-labelledby="create-token">
+    <app-create-token-table></app-create-token-table>
 </div>
-<div *ngIf="showToken">
-    <app-admin-token-view (closingTrigger)="closeView()" [token]="viewToken"></app-admin-token-view>
+<div class="tab-pane fade" id="deploy-token" role="tabpanel" aria-labelledby="deploy-token">
+    <app-deploy-token-table></app-deploy-token-table>
 </div>
+
+
+
 
