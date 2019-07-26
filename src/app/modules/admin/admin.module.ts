@@ -5,7 +5,7 @@ import { AdminTokenListComponent } from './admin-token-list/admin-token-list.com
 import { RouterModule } from '@angular/router';
 import { adminRoutes } from './admin.routes';
 import { AdminListTokenViewComponent } from './admin-token-list/tables/token-table/admin-list-token-view/admin-list-token-view.component';
-import { AdminTokenViewComponent } from './admin-home/admin-token-view/admin-token-view.component';
+import { AdminTokenViewComponent } from './admin-home/create-token-table/admin-token-view/admin-token-view.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { SideNavComponent } from 'src/app/shared/components/side-nav/side-nav.component';
 
@@ -18,6 +18,8 @@ import { TokenTableComponent } from './admin-token-list/tables/token-table/token
 import { LiveTokenTableComponent } from './admin-token-list/tables/live-token-table/live-token-table.component';
 import { AdminOutletComponent } from './admin-outlet/admin-outlet.component';
 import { LiveTokenViewComponent } from './admin-token-list/tables/live-token-table/live-token-view/live-token-view.component';
+import { CreateTokenTableComponent } from './admin-home/create-token-table/create-token-table.component';
+import { DeployTokenTableComponent } from './admin-home/deploy-token-table/deploy-token-table.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { LiveTokenViewComponent } from './admin-token-list/tables/live-token-tab
     TokenTableComponent,
     LiveTokenTableComponent,
     AdminOutletComponent,
-    LiveTokenViewComponent
+    LiveTokenViewComponent,
+    CreateTokenTableComponent,
+    DeployTokenTableComponent
     ],
     imports: [
         CommonModule,
