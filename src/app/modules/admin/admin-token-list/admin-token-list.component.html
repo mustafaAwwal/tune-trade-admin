@@ -11,10 +11,10 @@
     </ul>
     <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="token" role="tabpanel" aria-labelledby="token">
-        <token-table></token-table>
+        <token-table #tokenTable (refreshLiveTokenTrigger)="liveTokenTable.getLiveTokens()"></token-table>
     </div>
     <div class="tab-pane fade" id="live-token" role="tabpanel" aria-labelledby="live-token">
-        <live-token-table></live-token-table>
+        <live-token-table #liveTokenTable (refreshTokenTableTriggerForParent)="tokenTable.getListTokens()"></live-token-table>
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GetTokenRequestsService } from 'src/app/shared/services';
 import { tokenListViewTransition } from 'src/app/shared/animations/token-list-view-animation';
 
@@ -13,6 +13,7 @@ import { tokenListViewTransition } from 'src/app/shared/animations/token-list-vi
 export class TokenTableComponent implements OnInit {
   private tokens: any[];
   private viewToken: any;
+  @Output() refreshLiveTokenTrigger = new EventEmitter<boolean>();
   constructor(private getTokenService: GetTokenRequestsService) { }
 
   ngOnInit() {
@@ -31,5 +32,12 @@ export class TokenTableComponent implements OnInit {
   }
   closeView(event) {
     this.viewToken = null;
+  }
+  refreshTable(event) {
+    console.log('in refresh table in token table component')
+    this.getListTokens();
+    this.refreshLiveTokenTrigger.emit(true);
+    this.closeView(event);
+
   }
 }

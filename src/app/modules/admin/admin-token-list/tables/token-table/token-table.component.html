@@ -1,5 +1,5 @@
 <div class="tokenViewDiv">
-        <app-admin-list-token-view @tokenViewAnimation (closeViewTrgger)="closeView($event)" *ngIf="viewToken" [token]="viewToken"></app-admin-list-token-view>
+        <app-admin-list-token-view @tokenViewAnimation (closeViewTrgger)="closeView($event)" (refreshTableTrigger) = "refreshTable($event)" *ngIf="viewToken" [token]="viewToken"></app-admin-list-token-view>
 </div>
 <div class="table-responsive">
     <table class="table">
