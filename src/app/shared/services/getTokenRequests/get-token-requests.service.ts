@@ -26,7 +26,7 @@ export class GetTokenRequestsService {
   }
   insertTokenFromList(tokenData: insertTokenFromListModel): Observable<HttpResponse<any>> {
     const httpOptions = this.getHeaders();
-    return this.refreshToken(this.http.post<HttpResponse<any>>(this.urls.getListTokens, tokenData, httpOptions));
+    return this.refreshToken(this.http.post<HttpResponse<any>>(this.urls.insertTokenData, tokenData, httpOptions));
 
   }
   getTokenData(): Observable<HttpResponse<any>> {
@@ -46,11 +46,13 @@ export class GetTokenRequestsService {
     response.subscribe(res => {
       const headerValue = res.headers.get('token');
       const status      = res.body['status'];
+      console.log('The following data is consoled from get token request service in function refresh token: ');
+      console.log(res.headers);
       if (status) {
         sessionStorage.setItem('token', headerValue);
       } else {
-        sessionStorage.clear();
-        this.router.navigate(['']);
+        // sessionStorage.clear();
+        // this.router.navigate(['']);
       }
     });
     return response;

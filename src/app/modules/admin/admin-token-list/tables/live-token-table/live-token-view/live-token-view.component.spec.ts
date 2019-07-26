@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminTokenViewComponent } from './admin-token-view.component';
+import { LiveTokenViewComponent } from './live-token-view.component';
 
-describe('AdminTokenViewComponent', () => {
-  let component: AdminTokenViewComponent;
-  let fixture: ComponentFixture<AdminTokenViewComponent>;
+describe('LiveTokenViewComponent', () => {
+  let component: LiveTokenViewComponent;
+  let fixture: ComponentFixture<LiveTokenViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminTokenViewComponent ]
+      declarations: [ LiveTokenViewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminTokenViewComponent);
+    fixture = TestBed.createComponent(LiveTokenViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,7 +7,6 @@ import { GetTokenRequestsService } from 'src/app/shared/services/index';
   selector: 'app-admin-token-list',
   templateUrl: './admin-token-list.component.html',
   styleUrls: ['./admin-token-list.component.scss'],
-  
 })
 export class AdminTokenListComponent implements OnInit {
   private viewToken = null;
