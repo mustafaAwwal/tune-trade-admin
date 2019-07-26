@@ -46,8 +46,6 @@ export class GetTokenRequestsService {
     response.subscribe(res => {
       const headerValue = res.headers.get('token');
       const status      = res.body['status'];
-      console.log('The following data is consoled from get token request service in function refresh token: ');
-      console.log(res.headers);
       if (status) {
         sessionStorage.setItem('token', headerValue);
       } else {

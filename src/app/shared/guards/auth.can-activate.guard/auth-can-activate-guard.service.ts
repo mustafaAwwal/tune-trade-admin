@@ -11,7 +11,6 @@ export class AuthCanActivateGuardService implements CanActivate {
   }
 
   canActivate(): boolean {
-    console.log('something')
     if (sessionStorage.getItem('authToken')) {
       return true;
     } else {
