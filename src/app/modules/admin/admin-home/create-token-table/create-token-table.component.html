@@ -22,6 +22,6 @@
         
 </div>
 <div *ngIf="showToken">
-    <app-admin-token-view (closingTrigger)="closeView()" [token]="viewToken"></app-admin-token-view>
+    <app-admin-token-view (closingTrigger)="closeView($event)" [token]="viewToken"></app-admin-token-view>
 </div>
 

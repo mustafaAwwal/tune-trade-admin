@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment_url } from 'src/environments/environment';
+import { environment_url } from 'src/environments/environment.prod';
 import { GetAllTokensReponseModels, insertTokenFromListModel, RemoveLiveTokenModel } from 'src/app/shared/models';
 import { Router } from '@angular/router';
 @Injectable({
