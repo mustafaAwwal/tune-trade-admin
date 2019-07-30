@@ -11,8 +11,8 @@ import { tokenListViewTransition } from 'src/app/shared/animations/token-list-vi
   ]
 })
 export class TokenTableComponent implements OnInit {
-  private tokens: any[];
-  private viewToken: any;
+  tokens: any[];
+  viewToken: any;
   @Output() refreshLiveTokenTrigger = new EventEmitter<boolean>();
   constructor(private getTokenService: GetTokenRequestsService) { }
 

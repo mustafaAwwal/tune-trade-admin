@@ -7,7 +7,7 @@ import { GetTokenRequestsService } from 'src/app/shared/services';
   styleUrls: ['./deploy-token-table.component.scss']
 })
 export class DeployTokenTableComponent implements OnInit {
-  private tokens : any[];
+  tokens : any[];
   constructor(private tokenService: GetTokenRequestsService) { 
     this.getDeployedTokens();
   }

@@ -9,10 +9,10 @@ import { GetTokenRequestsService } from 'src/app/shared/services/index';
   styleUrls: ['./admin-token-list.component.scss'],
 })
 export class AdminTokenListComponent implements OnInit {
-  private viewToken = null;
+  viewToken = null;
   // private viewTable = true;
   // windowsPosition = null;
-  private tokens = [
+  tokens = [
   ];
   constructor() { }
 

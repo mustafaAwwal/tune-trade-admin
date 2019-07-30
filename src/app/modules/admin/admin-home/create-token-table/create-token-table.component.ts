@@ -7,8 +7,8 @@ import { GetTokenRequestsService } from 'src/app/shared/services';
   styleUrls: ['./create-token-table.component.scss']
 })
 export class CreateTokenTableComponent implements OnInit {
-  private viewToken: any;
-  private tokens = [
+  viewToken: any;
+  tokens = [
 
   ];
   showToken = false;

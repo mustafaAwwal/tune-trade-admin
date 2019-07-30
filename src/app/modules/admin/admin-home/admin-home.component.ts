@@ -7,8 +7,8 @@ import { GetTokenRequestsService } from 'src/app/shared/services/index';
   styleUrls: ['./admin-home.component.scss']
 })
 export class AdminHomeComponent implements OnInit {
-  private viewToken: any;
-  private tokens = [
+  viewToken: any;
+  tokens = [
   ];
   showToken = false;
   constructor(private getTokenService: GetTokenRequestsService) { }

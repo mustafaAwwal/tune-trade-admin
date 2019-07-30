@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class GetTokenRequestsService {
   // Define url in this object so editing url will be easy
-  private urls = {
+  urls = {
     getAlltokens: environment_url + 'getalltokens',
     getListTokens: environment_url + 'getListTokens',
     insertTokenData: environment_url + 'inserttokendata',

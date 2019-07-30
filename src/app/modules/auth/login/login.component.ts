@@ -10,9 +10,9 @@ import { LoginRequest } from 'src/app/shared/models/requestModels/loginRequest.m
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  private loginForm: FormGroup;
-  private errorMassage = '';
-  private validationErrors = {
+  loginForm: FormGroup;
+  errorMassage = '';
+  validationErrors = {
     userId: [
       {
         type: 'required',

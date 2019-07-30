@@ -11,10 +11,10 @@ import { tokenListViewTransition } from 'src/app/shared/animations/token-list-vi
   ]
 })
 export class LiveTokenTableComponent implements OnInit {
-  private viewToken: any;
+  viewToken: any;
   @Output() refreshTokenTableTriggerForParent = new EventEmitter<boolean>();
   constructor(private tokenService: GetTokenRequestsService) { }
-  private liveTokens: any[];
+  liveTokens: any[];
   ngOnInit() {
     this.getLiveTokens();
   }
