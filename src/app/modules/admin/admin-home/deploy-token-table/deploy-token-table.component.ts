@@ -15,7 +15,6 @@ export class DeployTokenTableComponent implements OnInit {
   ngOnInit() {
   }
   getDeployedTokens() {
-    console.log('in getDeployedTokens in deplot-token-table');
     this.tokenService.getDeployTokens().subscribe(
       res => {
         console.log(res.body);

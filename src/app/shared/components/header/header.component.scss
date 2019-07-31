@@ -35,3 +35,14 @@
     background-color: #343A40;
     color: white;
 }
+
+.navbar-brand {
+    
+    background: linear-gradient(to right, #bbd2c5,#bbd2c5, #536976);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+    img {
+        height: 40px;
+    }
+}
