@@ -13,13 +13,16 @@ import { SideNavComponent } from 'src/app/shared/components/side-nav/side-nav.co
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
 // Icons imports
-import { faUser, faUserCircle, faCogs, faColumns, faArrowLeft, faList, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faUserCircle, faCogs, faColumns, faArrowLeft, faList, faSignOutAlt, faIdCard } from '@fortawesome/free-solid-svg-icons';
 import { TokenTableComponent } from './admin-token-list/tables/token-table/token-table.component';
 import { LiveTokenTableComponent } from './admin-token-list/tables/live-token-table/live-token-table.component';
 import { AdminOutletComponent } from './admin-outlet/admin-outlet.component';
 import { LiveTokenViewComponent } from './admin-token-list/tables/live-token-table/live-token-view/live-token-view.component';
 import { CreateTokenTableComponent } from './admin-home/create-token-table/create-token-table.component';
 import { DeployTokenTableComponent } from './admin-home/deploy-token-table/deploy-token-table.component';
+import { KycComponent } from './kyc-group/kyc/kyc.component';
+import { KycReqTableComponent } from './kyc-group/comps-kyc/kyc-req-table/kyc-req-table.component';
+import { KycVfyTableComponent } from './kyc-group/comps-kyc/kyc-vfy-table/kyc-vfy-table.component';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { DeployTokenTableComponent } from './admin-home/deploy-token-table/deplo
     AdminOutletComponent,
     LiveTokenViewComponent,
     CreateTokenTableComponent,
-    DeployTokenTableComponent
+    DeployTokenTableComponent,
+    KycComponent,
+    KycReqTableComponent,
+    KycVfyTableComponent
     ],
     imports: [
         CommonModule,
@@ -52,7 +58,8 @@ export class AdminModule {
           faColumns,
           faArrowLeft,
           faList,
-          faSignOutAlt
+          faSignOutAlt,
+          faIdCard
         )
     }
 
